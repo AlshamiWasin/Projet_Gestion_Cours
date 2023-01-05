@@ -1,6 +1,6 @@
 export interface Cours {
   id: number;
   nom: string;
-  professerId: number;
+  professeurId: number;
   nbEleves: number;
 }

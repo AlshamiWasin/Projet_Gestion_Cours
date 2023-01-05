@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Cours
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col><strong>Nom du cours</strong></ion-col>
+      <ion-col><strong>Nombre d'étudiants</strong></ion-col>
+      <ion-col><strong>Id du professeur</strong></ion-col>
+      <ion-col><strong>Supprimer</strong></ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let cour of cours; index as position">
+      <ion-col>{{cour.nom}}</ion-col>
+      <ion-col>{{cour.nbEleves}}</ion-col>
+      <ion-col>{{cour.professeurId}}</ion-col>
+<!--      <ion-col><ion-button color="danger" (click)="listeCoursService.deleteFromListeCours(cour)"><ion-icon name="close-circle-outline"></ion-icon></ion-button></ion-col>-->
+    </ion-row>
+  </ion-grid>
+</ion-content>

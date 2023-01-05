@@ -17,7 +17,7 @@
     "name": "typicode"
   },
   "Cours": [
-
+    { "id":1,"nom": "cour 1","professeurId":5,"nbEleves":2}
   ],
   "Professeurs" : [
 
