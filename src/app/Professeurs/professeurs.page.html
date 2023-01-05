@@ -8,6 +8,26 @@
 
 <ion-content [fullscreen]="true">
 
+  <ion-grid>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-button routerLink="saisie-professeurs">Ajouter un Professeur</ion-button>
+  <ion-button routerLink="recherche-professeurs">Recherche un Professeur</ion-button>
+
+  <ion-row>
+    <ion-col><strong>Nom de professeur</strong></ion-col>
+    <ion-col><strong>Prenom de professeur</strong></ion-col>
+    <ion-col><strong>Avatar de professeur</strong></ion-col>
+    <ion-col><strong>Age de professeur</strong></ion-col>
+    <ion-col><strong>Supprimer</strong></ion-col>
+  </ion-row>
+
+  <ion-row *ngFor="let prefesseur of professeurs; index as position">
+    <ion-col>{{prefesseur.nom}}</ion-col>
+    <ion-col>{{prefesseur.prenom}}</ion-col>
+    <ion-col>{{prefesseur.urlPhoto}}</ion-col>
+    <ion-col>{{prefesseur.age}}</ion-col>
+    <ion-col><ion-button color="danger" (click)="deleteProfesseur(prefesseur)"><ion-icon name="close-circle-outline"></ion-icon></ion-button></ion-col>
+  </ion-row>
+</ion-grid>
+
 </ion-content>

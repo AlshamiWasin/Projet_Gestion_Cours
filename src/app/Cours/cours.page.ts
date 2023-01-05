@@ -15,7 +15,16 @@ export class CoursPage {
 
 
   async ngOnInit() {
-    this.cours = await this.CoursApi.get().toPromise();
+    await this.CoursApi.get().subscribe(value => this.cours = value);
+  }
+
+  async ionViewWillEnter(){
+    await this.ngOnInit();
+  }
+
+  async deleteCour(cour: Cours){
+    await this.CoursApi.delete(cour).subscribe();
+    await this.ngOnInit();
   }
 
 }

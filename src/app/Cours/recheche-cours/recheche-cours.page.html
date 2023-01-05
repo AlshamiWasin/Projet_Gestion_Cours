@@ -1,9 +1,33 @@
 <ion-header>
   <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-button>
     <ion-title>recheche-cours</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-searchbar [debounce]="500" (ionChange)="handleChange($event)" show-clear-button="focus"></ion-searchbar>
+  <!-- <ion-button routerLink="/saisie-cours">Saisie-Cours</ion-button> -->
+  <ion-grid>
+
+    <ion-row>
+      <ion-col><strong>Nom du cours</strong></ion-col>
+      <ion-col><strong>Nombre d'étudiants</strong></ion-col>
+      <ion-col><strong>Id du professeur</strong></ion-col>
+      <ion-col><strong>Supprimer</strong></ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let result of results">
+      <ion-col>{{result.nom}}</ion-col>
+      <ion-col>{{result.nbEleves}}</ion-col>
+      <ion-col>{{result.professeurId}}</ion-col>
+      <ion-col><ion-button color="danger" (click)="deleteCour(result)"><ion-icon name="close-circle-outline"></ion-icon></ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 
 </ion-content>

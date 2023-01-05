@@ -1,9 +1,36 @@
 <ion-header>
   <ion-toolbar>
+    <ion-button slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-button>
     <ion-title>recherche-professeurs</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+    <ion-searchbar [debounce]="500" (ionChange)="handleChange($event)" show-clear-button="focus"></ion-searchbar>
+
+
+    <ion-grid>
+
+      <ion-button routerLink="saisie-professeurs">Ajouter un Professeur</ion-button>
+      <ion-button routerLink="recherche-professeurs">Recherche un Professeur</ion-button>
+
+      <ion-row>
+        <ion-col><strong>Nom de professeur</strong></ion-col>
+        <ion-col><strong>Prenom de professeur</strong></ion-col>
+        <ion-col><strong>Avatar de professeur</strong></ion-col>
+        <ion-col><strong>Age de professeur</strong></ion-col>
+        <ion-col><strong>Supprimer</strong></ion-col>
+      </ion-row>
+
+      <ion-row *ngFor="let result of results; index as position">
+        <ion-col>{{result.nom}}</ion-col>
+        <ion-col>{{result.prenom}}</ion-col>
+        <ion-col>{{result.urlPhoto}}</ion-col>
+        <ion-col>{{result.age}}</ion-col>
+        <ion-col><ion-button color="danger" (click)="deleteProfesseur(result)"><ion-icon name="close-circle-outline"></ion-icon></ion-button></ion-col>
+      </ion-row>
+    </ion-grid>
 </ion-content>
