@@ -21,12 +21,14 @@
     <ion-col><strong>Supprimer</strong></ion-col>
   </ion-row>
 
-  <ion-row *ngFor="let prefesseur of professeurs; index as position">
-    <ion-col>{{prefesseur.nom}}</ion-col>
-    <ion-col>{{prefesseur.prenom}}</ion-col>
-    <ion-col>{{prefesseur.urlPhoto}}</ion-col>
-    <ion-col>{{prefesseur.age}}</ion-col>
-    <ion-col><ion-button color="danger" (click)="deleteProfesseur(prefesseur)"><ion-icon name="close-circle-outline"></ion-icon></ion-button></ion-col>
+  <ion-row *ngFor="let professeur of professeurs; index as position">
+    <ion-col>{{professeur.nom}}</ion-col>
+    <ion-col>{{professeur.prenom}}</ion-col>
+    <ion-col>{{professeur.urlPhoto}}</ion-col>
+    <ion-col>{{professeur.age}}</ion-col>
+    <ion-col>
+      <ion-button color="danger" (click)="openAlert(professeur)"><ion-icon name="close-circle-outline"></ion-icon></ion-button>
+    </ion-col>
   </ion-row>
 </ion-grid>
 
