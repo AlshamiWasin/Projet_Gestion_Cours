@@ -31,7 +31,8 @@ export class RechercheProfesseursPage implements OnInit {
   }
 
   async deleteProfesseur(professeurs: Professeurs){
-    await this.ProfesseursApi.delete(professeurs).subscribe();
-    await this.ngOnInit();
+    await this.ProfesseursApi.delete(professeurs).subscribe(() => {
+      this.ngOnInit();
+    });
   }
 }

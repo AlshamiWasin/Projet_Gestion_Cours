@@ -18,8 +18,13 @@
       <ion-input formControlName="nbEleves" required="true" type="number" placeholder="5" min="0"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">id du professeur :</ion-label>
-      <ion-input formControlName="professeurId" required="true" type="number" placeholder="0"></ion-input>
+      <ion-list>
+        <ion-item>
+          <ion-select interface="popover" placeholder="Select professeur" formControlName="professeurId" required="true" type="number">
+            <ion-select-option *ngFor="let prefesseur of professeurs; index as position" value="{{prefesseur.id}}">{{prefesseur.nom}} {{prefesseur.prenom}} </ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
     </ion-item>
     <ion-item>
       <ion-button type="submit">Validez</ion-button>

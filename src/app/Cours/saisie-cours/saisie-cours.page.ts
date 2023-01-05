@@ -4,6 +4,8 @@ import {CourBackEndService} from "../../services/cour-back-end.service";
 import {Router} from "@angular/router";
 import { AlertController } from '@ionic/angular';
 import {Cours} from "../../interfaces/Cours";
+import {Professeurs} from "../../interfaces/Professeurs";
+import {ProfesseurBackEndService} from "../../services/professeur-back-end.service";
 
 @Component({
   selector: 'app-saisie-cours',
@@ -15,17 +17,24 @@ export class SaisieCoursPage implements OnInit {
   ionicForm: any;
   isSubmitted = false;
 
+  public professeurs: Professeurs[] | undefined = [];
+
   constructor(public formBuilder: FormBuilder,
               private alertController: AlertController,
               private CoursApi: CourBackEndService,
-              private router: Router) { }
+              private router: Router,
+              private ProfesseursApi: ProfesseurBackEndService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+
     this.ionicForm = this.formBuilder.group({
       nom: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       nbEleves: ['', [Validators.required]],
       professeurId: ['', [Validators.required]]
     })
+
+    await this.ProfesseursApi.get().subscribe(value => this.professeurs = value);
+
   }
 
   get errorControl() {
@@ -57,9 +66,9 @@ export class SaisieCoursPage implements OnInit {
 
       console.log(cour);
 
-      await this.CoursApi.post(cour).subscribe();
-      this.router.navigate(['..']);
-      this.ionicForm.reset();
+      await this.CoursApi.post(cour).toPromise();
+      await this.router.navigate(['/tabs/']);
+      /*this.ionicForm.reset();*/
     }
   }
 

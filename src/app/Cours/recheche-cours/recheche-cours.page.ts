@@ -28,8 +28,9 @@ export class RechecheCoursPage implements OnInit {
   }
 
   async deleteCour(cour: Cours){
-    await this.CoursApi.delete(cour).subscribe();
-    await this.ngOnInit();
+    await this.CoursApi.delete(cour).subscribe(() => {
+      this.ngOnInit();
+    });
   }
 
 }

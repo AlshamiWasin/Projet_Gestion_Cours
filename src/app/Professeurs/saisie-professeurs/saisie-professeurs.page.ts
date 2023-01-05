@@ -60,9 +60,10 @@ export class SaisieProfesseursPage implements OnInit {
 
       console.log(professeur);
 
-      await this.ProfesseursApi.post(professeur).subscribe();
-      this.router.navigate(['/Professeurs']);
-      this.ionicForm.reset();
+      await this.ProfesseursApi.post(professeur).toPromise();
+      /*this.ionicForm.reset();*/
+      await this.router.navigate(['/tabs/Professeurs']);
+
     }
   }
 
