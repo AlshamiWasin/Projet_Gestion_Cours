@@ -1,17 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Cours
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-row>
+      <ion-col><strong>Nom du cours</strong></ion-col>
+      <ion-col><strong>Nombre d'étudiants</strong></ion-col>
+      <ion-col><strong>Nom du professeur</strong></ion-col>
+      <ion-col><strong>Supprimer</strong></ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let cour of listeCoursService.cours; index as position">
+      <ion-col>{{cour.nomCours}}</ion-col>
+      <ion-col>{{cour.nbEtudiant}}</ion-col>
+      <ion-col>{{cour.nomProfesseur}}</ion-col>
+      <ion-col><ion-button color="danger" (click)="listeCoursService.deleteFromListeCours(cour)"><ion-icon name="close-circle-outline"></ion-icon></ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
