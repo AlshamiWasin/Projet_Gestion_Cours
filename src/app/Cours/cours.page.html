@@ -23,7 +23,11 @@
       <ion-col>{{cour.nom}}</ion-col>
       <ion-col>{{cour.nbEleves}}</ion-col>
       <ion-col>{{professeurs[cour.professeurId].prenom}}, {{professeurs[cour.professeurId].nom}}</ion-col>
-      <ion-col><ion-button color="danger" (click)="deleteCour(cour)"><ion-icon name="close-circle-outline"></ion-icon></ion-button></ion-col>
+      <ion-col>
+        <ion-button color="danger" (click)="openAlert(cour)">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
