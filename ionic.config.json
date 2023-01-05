@@ -1,0 +1,7 @@
+{
+  "name": "Project_Gestion_Cours",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
