@@ -16,7 +16,26 @@
   "profile": {
     "name": "typicode"
   },
-  "Cours": [],
+  "Cours": [
+    {
+      "id": 1,
+      "nom": "test",
+      "professeurId": "3",
+      "nbEleves": 6
+    },
+    {
+      "id": 3,
+      "nom": "Cours",
+      "professeurId": "3",
+      "nbEleves": 15
+    },
+    {
+      "id": 4,
+      "nom": "cours deux",
+      "professeurId": "1",
+      "nbEleves": 15
+    }
+  ],
   "Professeurs": [
     {
       "id": 1,

@@ -15,14 +15,14 @@
     <ion-row>
       <ion-col><strong>Nom du cours</strong></ion-col>
       <ion-col><strong>Nombre d'étudiants</strong></ion-col>
-      <ion-col><strong>Id du professeur</strong></ion-col>
+      <ion-col><strong>Professeur</strong></ion-col>
       <ion-col><strong>Supprimer</strong></ion-col>
     </ion-row>
 
     <ion-row *ngFor="let cour of cours; index as position">
       <ion-col>{{cour.nom}}</ion-col>
       <ion-col>{{cour.nbEleves}}</ion-col>
-      <ion-col>{{cour.professeurId}}</ion-col>
+      <ion-col>{{professeurs[cour.professeurId].prenom}}, {{professeurs[cour.professeurId].nom}}</ion-col>
       <ion-col><ion-button color="danger" (click)="deleteCour(cour)"><ion-icon name="close-circle-outline"></ion-icon></ion-button></ion-col>
     </ion-row>
   </ion-grid>
