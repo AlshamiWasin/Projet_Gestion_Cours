@@ -19,21 +19,9 @@
   "Cours": [
     {
       "id": 1,
-      "nom": "test",
-      "professeurId": "3",
-      "nbEleves": 6
-    },
-    {
-      "id": 3,
-      "nom": "Cours",
-      "professeurId": "3",
-      "nbEleves": 15
-    },
-    {
-      "id": 4,
-      "nom": "cours deux",
-      "professeurId": "1",
-      "nbEleves": 15
+      "nom": "zaeaze",
+      "professeurId": "2",
+      "nbEleves": 56
     }
   ],
   "Professeurs": [
@@ -43,6 +31,48 @@
       "prenom": "azeazeaze",
       "urlPhoto": "azeazeaze",
       "age": 7
+    },
+    {
+      "id": 3,
+      "nom": "fghfgh",
+      "prenom": "fhfghfg",
+      "urlPhoto": "hfghfghfgh",
+      "age": 75
+    },
+    {
+      "id": 4,
+      "nom": "zerzer",
+      "prenom": "zerzer",
+      "urlPhoto": "zerzer",
+      "age": 75
+    },
+    {
+      "id": 5,
+      "nom": "sdfsdf",
+      "prenom": "sdfsdf",
+      "urlPhoto": "sdfsdf",
+      "age": 7575
+    },
+    {
+      "id": 6,
+      "nom": "qsdfqsdf",
+      "prenom": "qsdfsqdf",
+      "urlPhoto": "qsdfqsdfsqdf",
+      "age": 84
+    },
+    {
+      "id": 7,
+      "nom": "sqdfqsdf",
+      "prenom": "qsdfqsdf",
+      "urlPhoto": "qsdfqsdf",
+      "age": 1000
+    },
+    {
+      "id": 8,
+      "nom": "qsdqsd",
+      "prenom": "qsdqsd",
+      "urlPhoto": "qsdqsd",
+      "age": 0
     }
   ]
 }

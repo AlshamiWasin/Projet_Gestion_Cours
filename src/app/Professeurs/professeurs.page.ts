@@ -34,12 +34,12 @@ export class ProfesseursPage {
     const messageDelete = 'Voulez-vous supprimer ?'
     const alerte = await this.alertController.create({
       message: messageDelete,
-      buttons: ['Non',
-      {
-        text:'Oui',handler: () => {
-          this.deleteProfesseur(professeur);
+      buttons: ['Annuler',
+        {
+          text:'Confirmer',handler: () => {
+            this.deleteProfesseur(professeur);
+          }
         }
-      }
     ]
     });
 
