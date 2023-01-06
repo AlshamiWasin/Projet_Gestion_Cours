@@ -23,7 +23,9 @@
       "nom": "Jean",
       "prenom": "Jean",
       "urlPhoto": "oui",
-      "age": 5
+      "age": 5,
+      "login": "toto",
+      "password": 123
     },
     {
       "id": 2,

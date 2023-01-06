@@ -21,10 +21,11 @@ export class ProfesseurBackEndService {
   }
 
   getForAuthentification(login: string, password: string): Observable<Professeurs> {
-    let parameters = {"login":login, "password": password};
+    let parameters = {"login": login, "password": password};
     let queryParams = new HttpParams({ fromObject: parameters });
-    return this.http.get<Professeurs>(ProfesseurUrl, {params: queryParams} );
+    return this.http.get<Professeurs>(ProfesseurUrl, {params: parameters} );
   }
+
 
   post(professeurs: Professeurs): Observable<Professeurs> {
     return this.http.post<Professeurs>(ProfesseurUrl,professeurs);

@@ -68,7 +68,6 @@ export class SaisieCoursPage implements OnInit {
 
       await this.CoursApi.post(cour).toPromise();
       await this.router.navigate(['/tabs/']);
-      /*this.ionicForm.reset();*/
     }
   }
 

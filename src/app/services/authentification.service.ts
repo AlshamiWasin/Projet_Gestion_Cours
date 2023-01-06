@@ -9,13 +9,18 @@ export class AuthentificationService {
 
   constructor(private ProfesseursApi: ProfesseurBackEndService) { }
 
+  async login(login: string, password: string) {
+    let user: Professeurs;
+    await this.ProfesseursApi.getForAuthentification(login, password).subscribe( (value) => {
+      user = value;
+      console.log(user);
 
-  login(login: any, password: any) {
-    let user : Professeurs|null = null;
-    this.ProfesseursApi.getForAuthentification(login, password).subscribe(value => user = value)
+      if(user.login != "") {
+        sessionStorage.setItem('user', user.login);
+      } else {
+        console.log("Vous n'êtes pas autorisé à accéder à l'application !");
+      }
+    });
 
-    /*if(user) {
-      sessionStorage.setItem('user', user.login)
-    }*/
   }
 }
