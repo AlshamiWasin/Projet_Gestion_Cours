@@ -4,4 +4,6 @@ export interface Professeurs {
   prenom: string;
   urlPhoto: string;
   age: number;
+  login: string;
+  password: string;
 }

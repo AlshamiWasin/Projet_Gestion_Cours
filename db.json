@@ -16,63 +16,23 @@
   "profile": {
     "name": "typicode"
   },
-  "Cours": [
-    {
-      "id": 1,
-      "nom": "zaeaze",
-      "professeurId": "2",
-      "nbEleves": 56
-    }
-  ],
+  "Cours": [],
   "Professeurs": [
     {
+      "id": 1,
+      "nom": "Jean",
+      "prenom": "Jean",
+      "urlPhoto": "oui",
+      "age": 5
+    },
+    {
       "id": 2,
-      "nom": "azeaze",
-      "prenom": "azeazeaze",
-      "urlPhoto": "azeazeaze",
-      "age": 7
-    },
-    {
-      "id": 3,
-      "nom": "fghfgh",
-      "prenom": "fhfghfg",
-      "urlPhoto": "hfghfghfgh",
-      "age": 75
-    },
-    {
-      "id": 4,
-      "nom": "zerzer",
-      "prenom": "zerzer",
-      "urlPhoto": "zerzer",
-      "age": 75
-    },
-    {
-      "id": 5,
-      "nom": "sdfsdf",
-      "prenom": "sdfsdf",
-      "urlPhoto": "sdfsdf",
-      "age": 7575
-    },
-    {
-      "id": 6,
-      "nom": "qsdfqsdf",
-      "prenom": "qsdfsqdf",
-      "urlPhoto": "qsdfqsdfsqdf",
-      "age": 84
-    },
-    {
-      "id": 7,
-      "nom": "sqdfqsdf",
-      "prenom": "qsdfqsdf",
-      "urlPhoto": "qsdfqsdf",
-      "age": 1000
-    },
-    {
-      "id": 8,
-      "nom": "qsdqsd",
-      "prenom": "qsdqsd",
-      "urlPhoto": "qsdqsd",
-      "age": 0
+      "nom": "Jean",
+      "prenom": "Jean-Paul",
+      "urlPhoto": "non",
+      "age": 8,
+      "login": "PaulJean",
+      "password": "popol"
     }
   ]
 }

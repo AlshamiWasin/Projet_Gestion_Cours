@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from "@angular/forms";
-import {CourBackEndService} from "../../services/cour-back-end.service";
 import {Router} from "@angular/router";
 import { AlertController } from '@ionic/angular';
 import {ProfesseurBackEndService} from "../../services/professeur-back-end.service";
@@ -26,7 +25,9 @@ export class SaisieProfesseursPage implements OnInit {
       nom: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       prenom: ['', [Validators.required]],
       urlPhoto: ['', [Validators.required]],
-      age: ['', [Validators.required]]
+      age: ['', [Validators.required]],
+      login: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     })
   }
 
@@ -56,9 +57,10 @@ export class SaisieProfesseursPage implements OnInit {
           prenom: this.ionicForm?.value.prenom,
           urlPhoto: this.ionicForm?.value.urlPhoto,
           age: this.ionicForm?.value.age,
+          login: this.ionicForm?.value.login,
+          password: this.ionicForm?.value.password
         }
 
-      console.log(professeur);
 
       await this.ProfesseursApi.post(professeur).toPromise();
       /*this.ionicForm.reset();*/
