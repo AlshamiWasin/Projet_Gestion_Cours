@@ -58,4 +58,27 @@ export class CoursPage {
     await alerte.onDidDismiss();
   }
 
+  triNomCours = false;
+  triNbEtudiant = false;
+
+  triColonneNomCours() {
+    if(this.triNomCours == false) {
+      this.cours?.sort((a, b) => a.nom.localeCompare(b.nom))
+      this.triNomCours = true;
+    }else {
+      this.cours?.sort((a, b) => b.nom.localeCompare(a.nom))
+      this.triNomCours = false;
+    }
+  }
+
+  triColonneNbEtudiant() {
+    if(this.triNbEtudiant == false) {
+      this.cours?.sort((a, b) => a.nbEleves - b.nbEleves)
+      this.triNbEtudiant = true;
+    }else {
+      this.cours?.sort((a, b) => b.nbEleves - a.nbEleves)
+      this.triNbEtudiant = false;
+    }
+  }
+
 }

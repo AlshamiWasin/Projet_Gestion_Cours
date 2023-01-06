@@ -12,8 +12,8 @@ export class AuthentificationService {
   async login(login: string, password: string) {
     let user: Professeurs;
     await this.ProfesseursApi.getForAuthentification(login, password).subscribe( (value) => {
-      user = value;
-      console.log(user);
+      user = value[0];
+      console.log(user.login);
 
       if(user.login != "") {
         sessionStorage.setItem('user', user.login);

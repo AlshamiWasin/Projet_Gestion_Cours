@@ -16,7 +16,20 @@
   "profile": {
     "name": "typicode"
   },
-  "Cours": [],
+  "Cours": [
+    {
+      "id": 1,
+      "nom": "Mathematique",
+      "professeurId": "1",
+      "nbEleves": 15
+    },
+    {
+      "id": 2,
+      "nom": "Anglais",
+      "professeurId": "3",
+      "nbEleves": 5
+    }
+  ],
   "Professeurs": [
     {
       "id": 1,
@@ -35,6 +48,24 @@
       "age": 8,
       "login": "PaulJean",
       "password": "popol"
+    },
+    {
+      "id": 3,
+      "nom": "Adrien",
+      "prenom": "fzefz",
+      "urlPhoto": "zefz",
+      "age": 15,
+      "login": "ad",
+      "password": "321"
+    },
+    {
+      "id": 4,
+      "nom": "a",
+      "prenom": "a",
+      "urlPhoto": "azd",
+      "age": 1,
+      "login": "azd",
+      "password": "azdazd"
     }
   ]
 }

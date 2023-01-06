@@ -9,6 +9,7 @@ import {Professeurs} from "../interfaces/Professeurs";
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage implements OnInit {
 
   ionicForm: any;
@@ -17,7 +18,6 @@ export class LoginPage implements OnInit {
   constructor( public formBuilder: FormBuilder,
                private ProfesseursApi: ProfesseurBackEndService,
                private AuthServices: AuthentificationService,
-
   ) { }
 
   ngOnInit() {

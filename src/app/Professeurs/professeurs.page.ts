@@ -47,4 +47,38 @@ export class ProfesseursPage {
     await alerte.onDidDismiss();
   }
 
+  triNom = false;
+  triPrenom = false;
+  triAge = false;
+
+  triColonneNom() {
+    if(this.triNom == false) {
+      this.professeurs?.sort((a, b) => a.nom.localeCompare(b.nom));
+      this.triNom = true;
+    }else {
+      this.professeurs?.sort((a, b) => b.nom.localeCompare(a.nom));
+      this.triNom = false;
+    }
+  }
+
+  triColonnePrenom() {
+    if(this.triPrenom == false) {
+      this.professeurs?.sort((a, b) => a.prenom.localeCompare(b.prenom))
+      this.triPrenom = true;
+    }else {
+      this.professeurs?.sort((a, b) => b.prenom.localeCompare(a.prenom))
+      this.triPrenom = false;
+    }
+  }
+  
+  triColonneAge() {
+    if(this.triAge == false) {
+      this.professeurs?.sort((a, b) => a.age - b.age)
+      this.triAge = true;
+    }else {
+      this.professeurs?.sort((a, b) => b.age - a.age)
+      this.triAge = false;
+    }
+  }
+
 }
