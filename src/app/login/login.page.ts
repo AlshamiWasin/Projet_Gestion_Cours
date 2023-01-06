@@ -21,6 +21,9 @@ export class LoginPage implements OnInit {
   ) { }
 
   ngOnInit() {
+
+
+
     this.ionicForm = this.formBuilder.group({
       login: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       password: ['', [Validators.required]],

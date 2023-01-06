@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {IsAuthenticatedGuard} from "./guards/is-authenticated.guard";
+import {IsNotAuthenticatedGuard} from "./guards/is-not-authenticated.guard";
 
 
 const routes: Routes = [
@@ -13,7 +14,10 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+    canActivate: [
+      IsNotAuthenticatedGuard
+    ]
   }
 
 ];
