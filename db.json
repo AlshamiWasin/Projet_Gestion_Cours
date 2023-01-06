@@ -16,20 +16,9 @@
   "profile": {
     "name": "typicode"
   },
-  "Cours": [
-    {
-      "id": 1,
-      "nom": "Mathematique",
-      "professeurId": "1",
-      "nbEleves": 15
-    },
-    {
-      "id": 2,
-      "nom": "Anglais",
-      "professeurId": "3",
-      "nbEleves": 5
-    }
-  ],
+
+  "Photo": [],
+  "Cours": [],
   "Professeurs": [
     {
       "id": 1,

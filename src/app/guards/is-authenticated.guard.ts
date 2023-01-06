@@ -29,6 +29,20 @@ export class IsAuthenticatedGuard implements CanActivate, CanActivateChild {
     return true;
   }
 
+  // canDeactivate(childRoute: ActivatedRouteSnapshot,
+  //               state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+  //
+  //   // const session = sessionStorage.getItem('user');
+  //   //
+  //   // if (session) {
+  //   //   return false;
+  //   // }
+  //
+  //   return true;
+
+  // };
+
+
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
