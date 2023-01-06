@@ -20,9 +20,7 @@ export class PhotoService {
     // eslint-disable-next-line @typescript-eslint/naming-convention
   private PHOTO_STORAGE = 'photos';
 
-
   constructor(private http: HttpClient) { }
-
 
   get(): Observable<UserPhoto[]> {
     return this.http.get<UserPhoto[]>(url);
@@ -44,9 +42,6 @@ export class PhotoService {
     return this.http.delete<UserPhoto>(url+'/'+(userphoto.id||0));
   }
 
-
-
-
   public async loadSaved() {
     /**
      const photoList = await Preferences.get({
@@ -54,7 +49,6 @@ export class PhotoService {
     });
      this.photos = JSON.parse(photoList.value) || [];
      */
-
     await this.get().subscribe(value => this.photos = value);
 
     // Display the photo by reading into base64 format
@@ -165,9 +159,5 @@ export class PhotoService {
     };
     reader.readAsDataURL(blob);
   });
-
-
-
-
 
 }
