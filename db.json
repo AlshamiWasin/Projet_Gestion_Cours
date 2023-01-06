@@ -16,6 +16,7 @@
   "profile": {
     "name": "typicode"
   },
+
   "Photo": [],
   "Cours": [],
   "Professeurs": [
@@ -36,6 +37,24 @@
       "age": 8,
       "login": "PaulJean",
       "password": "popol"
+    },
+    {
+      "id": 3,
+      "nom": "Adrien",
+      "prenom": "fzefz",
+      "urlPhoto": "zefz",
+      "age": 15,
+      "login": "ad",
+      "password": "321"
+    },
+    {
+      "id": 4,
+      "nom": "a",
+      "prenom": "a",
+      "urlPhoto": "azd",
+      "age": 1,
+      "login": "azd",
+      "password": "azdazd"
     }
   ]
 }

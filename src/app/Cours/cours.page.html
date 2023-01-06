@@ -14,8 +14,8 @@
     <ion-button routerLink="/login">test</ion-button>
 
     <ion-row>
-      <ion-col><strong>Nom du cours</strong></ion-col>
-      <ion-col><strong>Nombre d'étudiants</strong></ion-col>
+      <ion-col><strong>Nom du cours</strong></ion-col><ion-icon name="caret-down-outline" *ngIf="!triNomCours" (click)="triColonneNomCours()"></ion-icon><ion-icon *ngIf="triNomCours" (click)="triColonneNomCours()" name="chevron-down-outline"></ion-icon>
+      <ion-col><strong>Nombre d'étudiants</strong></ion-col><ion-icon name="caret-down-outline" *ngIf="!triNbEtudiant" (click)="triColonneNbEtudiant()"></ion-icon><ion-icon *ngIf="triNbEtudiant" (click)="triColonneNbEtudiant()" name="chevron-down-outline"></ion-icon>
       <ion-col><strong>Professeur</strong></ion-col>
       <ion-col><strong>Supprimer</strong></ion-col>
     </ion-row>

@@ -14,10 +14,10 @@
   <ion-button routerLink="recherche-professeurs">Recherche un Professeur</ion-button>
 
   <ion-row>
-    <ion-col><strong>Nom de professeur</strong></ion-col>
-    <ion-col><strong>Prenom de professeur</strong></ion-col>
+    <ion-col><strong>Nom de professeur</strong><ion-icon name="caret-down-outline" *ngIf="!triNom" (click)="triColonneNom()"></ion-icon><ion-icon *ngIf="triNom" (click)="triColonneNom()" name="chevron-down-outline"></ion-icon></ion-col>
+    <ion-col><strong>Prenom de professeur</strong></ion-col><ion-icon name="caret-down-outline" *ngIf="!triPrenom" (click)="triColonnePrenom()"></ion-icon><ion-icon *ngIf="triPrenom" (click)="triColonnePrenom()"name="chevron-down-outline"></ion-icon>
     <ion-col><strong>Avatar de professeur</strong></ion-col>
-    <ion-col><strong>Age de professeur</strong></ion-col>
+    <ion-col><strong>Age de professeur</strong></ion-col><ion-icon name="caret-down-outline" *ngIf="!triAge" (click)="triColonneAge()"></ion-icon><ion-icon (click)="triColonneAge()" *ngIf="triAge" name="chevron-down-outline"></ion-icon>
     <ion-col><strong>Supprimer</strong></ion-col>
   </ion-row>
 

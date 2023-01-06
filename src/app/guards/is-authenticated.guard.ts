@@ -55,5 +55,4 @@ export class IsAuthenticatedGuard implements CanActivate, CanActivateChild {
 
       return true;
   }
-
 }
