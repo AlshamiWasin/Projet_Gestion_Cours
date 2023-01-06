@@ -4,6 +4,8 @@ import {Router} from "@angular/router";
 import { AlertController } from '@ionic/angular';
 import {ProfesseurBackEndService} from "../../services/professeur-back-end.service";
 import {Professeurs} from "../../interfaces/Professeurs";
+import {PhotoService} from "../../services/photo.service";
+import {UserPhoto} from "../../interfaces/userphoto";
 
 @Component({
   selector: 'app-saisie-professeurs',
@@ -14,13 +16,17 @@ export class SaisieProfesseursPage implements OnInit {
 
   ionicForm: any;
   isSubmitted = false;
+  private photos: UserPhoto[] = [];
+
 
   constructor(public formBuilder: FormBuilder,
               private alertController: AlertController,
               private ProfesseursApi: ProfesseurBackEndService,
-              private router: Router) { }
+              private router: Router,
+              public photoService: PhotoService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+
     this.ionicForm = this.formBuilder.group({
       nom: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       prenom: ['', [Validators.required]],
@@ -29,6 +35,8 @@ export class SaisieProfesseursPage implements OnInit {
       login: ['', [Validators.required]],
       password: ['', [Validators.required]]
     })
+
+    await this.photoService.loadSaved();
   }
 
   get errorControl() {
@@ -60,6 +68,7 @@ export class SaisieProfesseursPage implements OnInit {
           login: this.ionicForm?.value.login,
           password: this.ionicForm?.value.password
         }
+
 
 
       await this.ProfesseursApi.post(professeur).toPromise();
