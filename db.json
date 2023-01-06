@@ -16,8 +16,28 @@
   "profile": {
     "name": "typicode"
   },
-
-  "Photo": [],
+  "Photo": [
+    {
+      "id": 1,
+      "filePath": "1673022689214.jpeg",
+      "webviewPath": "blob:http://localhost:8100/da272b6a-c877-471b-bb91-d31f4806ac69"
+    },
+    {
+      "id": 2,
+      "filePath": "1673022718556.jpeg",
+      "webviewPath": "blob:http://localhost:8100/baf99edc-701c-461f-a6ec-af09340f836b"
+    },
+    {
+      "id": 3,
+      "filePath": "1673022792342.jpeg",
+      "webviewPath": "blob:http://localhost:8100/7643a2d8-83ae-4151-a180-76ce724ca161"
+    },
+    {
+      "id": 4,
+      "filePath": "1673024074950.jpeg",
+      "webviewPath": "blob:http://localhost:8100/9b9139f9-5d22-4afa-b4ef-f21bd391ab82"
+    }
+  ],
   "Cours": [],
   "Professeurs": [
     {

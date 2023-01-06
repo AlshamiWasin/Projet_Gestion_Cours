@@ -14,23 +14,38 @@
       <ion-input formControlName="nom" required="true" type="text" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Prenom de professeur :</ion-label>
+      <ion-label position="floating">Prénom de professeur :</ion-label>
       <ion-input formControlName="prenom" required="true" type="text" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">avatar de professeur :</ion-label>
-      <ion-input formControlName="urlPhoto" required="true" type="text" ></ion-input>
+
+      <ion-label>Avatar de professeur :</ion-label>
+      <ion-button (click)="photoService.addNewToGallery()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+      <ion-content *ngFor="let photo of photoService.photos; index as position">
+        <ion-chip>
+          <ion-avatar>
+            <ion-img [src]="photo.webviewPath"></ion-img>
+          </ion-avatar>
+          <ion-label>{{ photo.filePath }}</ion-label>
+        </ion-chip>
+        <ion-input class="ion-hide" formControlName="urlPhoto" required="true" type="text" >{{ photo }}</ion-input>
+      </ion-content>
+
+<!--      <ion-input formControlName="urlPhoto" required="true" type="text" ></ion-input>-->
+
     </ion-item>
     <ion-item>
-      <ion-label position="floating">age de professeur :</ion-label>
+      <ion-label position="floating">Age de professeur :</ion-label>
       <ion-input formControlName="age" required="true" type="number" placeholder="0"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">login:</ion-label>
+      <ion-label position="floating">Login :</ion-label>
       <ion-input formControlName="login" required="true" type="text" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">password :</ion-label>
+      <ion-label position="floating">Mot de passe :</ion-label>
       <ion-input formControlName="password" required="true" type="password" placeholder="0"></ion-input>
     </ion-item>
     <ion-item>
