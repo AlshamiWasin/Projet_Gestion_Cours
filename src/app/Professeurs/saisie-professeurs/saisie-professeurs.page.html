@@ -20,20 +20,20 @@
     <ion-item>
 
       <ion-label>Avatar de professeur :</ion-label>
-      <ion-button (click)="photoService.addNewToGallery()">
-        <ion-icon name="camera"></ion-icon>
-      </ion-button>
-      <ion-content *ngFor="let photo of photoService.photos; index as position">
-        <ion-chip>
-          <ion-avatar>
-            <ion-img [src]="photo.webviewPath"></ion-img>
-          </ion-avatar>
-          <ion-label>{{ photo.filePath }}</ion-label>
-        </ion-chip>
-        <ion-input class="ion-hide" formControlName="urlPhoto" required="true" type="text" >{{ photo }}</ion-input>
-      </ion-content>
+<!--      <ion-button (click)="photoService.addNewToGallery()">-->
+<!--        <ion-icon name="camera"></ion-icon>-->
+<!--      </ion-button>-->
+<!--      <ion-content *ngFor="let photo of photoService.photos; index as position">-->
+<!--        <ion-chip>-->
+<!--          <ion-avatar>-->
+<!--            <ion-img [src]="photo.webviewPath"></ion-img>-->
+<!--          </ion-avatar>-->
+<!--          <ion-label>{{ photo.filePath }}</ion-label>-->
+<!--        </ion-chip>-->
+<!--        <ion-input class="ion-hide" formControlName="urlPhoto" required="true" type="text" >{{ photo }}</ion-input>-->
+<!--      </ion-content>-->
 
-<!--      <ion-input formControlName="urlPhoto" required="true" type="text" ></ion-input>-->
+      <ion-input formControlName="urlPhoto" required="true" type="text" ></ion-input>
 
     </ion-item>
     <ion-item>
